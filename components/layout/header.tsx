@@ -6,17 +6,32 @@ export default function HeaderComponent() {
             <a className="logo hvr-underline-from-center" href="/" >
                 <img src="/img/logo.png" />
             </a>
+
+            <a className="logoResp" href="/" >
+                <img src="/img/af.png" />
+            </a>
         </Header>
     )
 }
 
 const Header = styled.header`
     background-color: var(--primary-color);
-    padding-top: 25px;
+    padding: 25px 20px 0;
     display: flex;
     justify-content: center;
     width: 100%;
 
+    .logoResp{
+        display:none;
+    }
+
+    .logo{
+        max-width: 706px;
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
     
 
     .hvr-underline-from-center {
@@ -45,8 +60,41 @@ const Header = styled.header`
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out;
     }
-.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
-  left: 0;
-  right: 0;
-}
+    .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+        left: 0;
+        right: 0;
+    }
+
+    @media(max-width:1250px){
+        padding: 25px 120px 0;
+        justify-content: flex-start;
+
+        .logo{
+            display:none;
+        }
+
+        .logoResp{
+            display: flex;
+            max-width: 200px;
+            width: 100%;
+            
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    @media(max-width: 760px){
+        padding: 25px 95px 0;
+        .logoResp{
+            display: flex;
+            max-width: 135px;
+        }
+    }
+
+    @media(max-width:550px){
+        padding: 25px 25px 0;
+
+        
+    }
 `

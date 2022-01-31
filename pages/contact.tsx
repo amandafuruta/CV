@@ -11,7 +11,7 @@ export default function Contact(){
         <>
             {/* <Header/> */}
             <Style>
-                <a href="/"><AiOutlineArrowLeft color="#fff" size={40}/></a>
+                <a href="/" className='back'><AiOutlineArrowLeft color="#fff" size={40}/></a>
                 <div id="container">
                     <div id="hero-img"></div>
                     <div id="profile-img">
@@ -21,18 +21,22 @@ export default function Contact(){
                     <div id="content">
                         <h1>Amanda Furuta</h1>
                         <p>Web Developer - ReactJs/NextJs</p>
-                        <div className="social">
-                            <a href="https://www.linkedin.com/in/AmandaFt07/"><GrLinkedinOption color="#a4a19f" size={20}/></a>
-                            <p>Amanda Furuta</p>
-                        </div>
-                        <div className="social">
-                            <CgMail color="#a4a19f" size={20} style={{marginRight:10}}/>
-                            <p>amandafuruta@gmail.com</p>
-                        </div>
-                        <div className="social">
-                            <a href="https://github.com/AmandaFt07"><VscGithub color="#a4a19f" size={20} style={{marginRight:10}}/></a>
-                            <p>AmandaFt07</p>
-                        </div>
+
+						<div className="socialbox">
+							<div className="social">
+								<a href="https://www.linkedin.com/in/AmandaFt07/"><GrLinkedinOption color="#a4a19f" size={20}/></a>
+								<p>Amanda Furuta</p>
+							</div>
+							<div className="social">
+								<CgMail color="#a4a19f" size={20} style={{marginRight:10}}/>
+								<p>amandafuruta@gmail.com</p>
+							</div>
+							<div className="social">
+								<a href="https://github.com/AmandaFt07"><VscGithub color="#a4a19f" size={20} style={{marginRight:10}}/></a>
+								<p>AmandaFt07</p>
+							</div>
+						</div>
+
                     </div>
                 </div>
             </Style>
@@ -50,38 +54,38 @@ const Style = styled.section`
 	font-family: 'Raleway', sans-serif;
 
 
-#container {
-	width: 400px;   
-	margin: 0 auto 0 auto;
-	background: #FFF;
-	border-radius: 10px;
-	box-shadow: 0 0 30px rgba(0,0,0,.3);
-	-webkit-box-shadow: 0 0 30px rgba(0,0,0,.3);
-	overflow: hidden;
-	
-	#hero-img {
-		width: 100%;
-		height: 200px;
-		background: url('http://emilcarlsson.se/assets/forest.jpg') no-repeat center center;
-		background-size: cover;
-	}
-	
-	#profile-img {
-		width: 160px;
-		height: 160px;
-		margin: -80px auto 0 auto;
-		border: 6px solid #FFF;
-		border-radius: 50%;
-		box-shadow: 0 0 5px rgba(90,90,90,.3);
-        overflow: hidden;
+	#container {
+		max-width: 400px;   
+		margin: 0 auto 0 auto;
+		background: #FFF;
+		border-radius: 10px;
+		box-shadow: 0 0 30px rgba(0,0,0,.3);
+		-webkit-box-shadow: 0 0 30px rgba(0,0,0,.3);
+		overflow: hidden;
 		
-		img {
-            width: 240px;
-            position: relative;
-            right: 29px;
-            top: -31px;
-}
+		#hero-img {
+			width: 100%;
+			height: 200px;
+			background: url('http://emilcarlsson.se/assets/forest.jpg') no-repeat center center;
+			background-size: cover;
+		}
+		
+		#profile-img {
+			width: 160px;
+			height: 160px;
+			margin: -80px auto 0 auto;
+			border: 6px solid #FFF;
 			border-radius: 50%;
+			box-shadow: 0 0 5px rgba(90,90,90,.3);
+			overflow: hidden;
+			border-radius: 50%;
+			
+			img {
+				width: 240px;
+				position: relative;
+				right: 29px;
+				top: -31px;
+			}
 		}
 	}
 	
@@ -108,7 +112,7 @@ const Style = styled.section`
 		a {
 			color: #CCC;
 			font-size: 14px;
-			margin: 0 10px;
+			margin: 0 10px 0 0;
 			transition: color .3s ease-in-out;
 			-webkit-transition: color .3s ease-in-out;
 			
@@ -117,16 +121,28 @@ const Style = styled.section`
 			}
 		}
 
-        .social{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px;
+		.socialbox{
+			margin-left: 23px;
+			.social{
+				display: flex;
+				align-items: center;
+			
+				margin: 20px;
 
-            p{
-                margin: 0
-            }
-        }
+				p{
+					margin: 0
+				}
+			}
+		}
 	}
 }
+
+@media(max-width:550px){
+	padding: 30px 20px;
+
+	#container {
+		margin-top: 40px;
+	}
+}
+
 `

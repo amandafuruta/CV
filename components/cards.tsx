@@ -30,8 +30,7 @@ const CardStyle = styled.div`
 
         h2{  
             position: relative;
-           
-  
+            display: inline;
             color: #000;
         }
 
@@ -105,5 +104,15 @@ const CardStyle = styled.div`
         animation-direction: normal, alternate;
     }
     
-    
+    @media(max-width:1250px){
+        max-width: 540px;
+    }
+
+    @media(max-width:370px){
+        .card{
+            h2{
+                font-size: 35px;
+            }
+        }
+    }
 `

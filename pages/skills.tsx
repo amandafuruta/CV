@@ -207,4 +207,16 @@ const Style = styled.section`
         position:relative;
         z-index:5;
     }
+
+    @media(max-width:1250px){
+        padding: 0 140px 150px;
+    }
+
+    @media(max-width: 760px){
+        padding: 0 110px 150px;
+    }
+
+    @media(max-width: 490px){
+        padding: 0 35px 150px;
+    }
 `

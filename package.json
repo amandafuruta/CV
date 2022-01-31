@@ -1,0 +1,48 @@
+{
+  "name": "base-front-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.4.1",
+    "@unform/core": "^2.1.6",
+    "@unform/web": "^2.1.6",
+    "axios": "^0.21.4",
+    "dotenv": "^10.0.0",
+    "next": "11.1.2",
+    "next-auth": "^3.29.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "styled-components": "^5.3.3",
+    "swiper": "^7.4.1",
+    "swr": "^1.0.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.20",
+    "@types/styled-components": "^5.1.19",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "babel-plugin-styled-components": "^2.0.2",
+    "cz-conventional-changelog": "3.3.0",
+    "typescript": "4.4.2"
+  },
+  "browserslist": [
+    "last 2 versions",
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
